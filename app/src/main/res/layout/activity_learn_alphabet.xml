@@ -22,25 +22,55 @@
         android:layout_centerHorizontal="true"
         >
     </ImageSwitcher>
-    <ImageView
-        android:id="@+id/viewnumber"
-        android:layout_width="100dp"
-        android:layout_centerHorizontal="true"
+    <RelativeLayout
+        android:id="@+id/show1"
         android:layout_below="@id/imageSwitcher1"
-        android:layout_height="80dp"
-        />
-    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
 
-        android:id="@+id/txtviewnum"
-        android:layout_width="100dp"
-        android:gravity="center_horizontal"
-        android:textColor="#ffe0b2"
-        android:typeface="monospace"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageSwitcher1"
-        android:layout_height="120dp" />
+        <ImageView
+            android:id="@+id/viewnumber"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+
+            android:id="@+id/txtviewnum"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:textColor="#f90e2f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:paddingTop="0dp"
+        android:layout_below="@id/show1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/viewnumber1"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+
+            android:id="@+id/txtviewnum1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:textColor="#f90e2f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

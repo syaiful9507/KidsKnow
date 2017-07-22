@@ -33,8 +33,8 @@ public class LearnNumber extends AppCompatActivity implements ViewSwitcher.ViewF
             R.raw.en_8, R.raw.en_9, R.raw.en_10};
     private int voiceIND[] = {R.raw.id_1, R.raw.id_2, R.raw.id_3, R.raw.id_4, R.raw.id_5, R.raw.id_6, R.raw.id_7,
             R.raw.id_8, R.raw.id_9, R.raw.id_10};
-    private String textnumbers[] = {"\n" + " " + "One" + "\n" + "Satu", "\n" + " " + "Two" + "\n" + "Dua", "\n" + " " + "Three" + "\n" + "Tiga", "\n" + " " + "Four" + "\n" + "Empat", "\n" + " " + "Five" + "\n" + "Lima",
-            "\n" + " " + "Six" + "\n" + "Enam", "\n" + " " + "Seven" + "\n" + "Tujuh", "\n" + " " + "Eight" + "\n" + "Delapan", "\n" + " " + "Nine" + "\n" + "Sembilan", "\n" + " " + "Ten" + "\n" + "Sepuluh", "\n"};
+    private String textnumbersIndo[] = {"Satu","Dua","Tiga","Empat","Lima","Enam","Tujuh","Delapan","Sembilan","Sepuluh"};
+    private String textnumbers[] = {"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"};
     int messageCount = arrImage.length;
     // to keep current Index of arrImage array
     int currentIndex = -1;
@@ -48,7 +48,7 @@ public class LearnNumber extends AppCompatActivity implements ViewSwitcher.ViewF
         setContentView(R.layout.activity_learn_number);
 
         final ImageView img = (ImageView) findViewById(R.id.viewnumber);
-        final TextView textview = (TextView) findViewById(R.id.txtviewnum);
+        //final Button btn1= (TextView) findViewById(R.id.txtviewnum);
 
         final ImageView img1 = (ImageView) findViewById(R.id.viewnumber1);
         final TextView textview2 = (TextView) findViewById(R.id.txtviewnum1);
@@ -63,7 +63,7 @@ public class LearnNumber extends AppCompatActivity implements ViewSwitcher.ViewF
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 imageSwitcher.setImageResource(arrImage[position]);
                 playSound(voiceENG[position]);
-                textview.setText(textnumbers[position]);
+                //textview.setText(textnumbers[position]);
                 img.setImageResource(viewbg[position]);
                 img1.setImageResource(viewbg[position]);
                 textview2.setText(textnumbers[position]);
@@ -85,6 +85,7 @@ public class LearnNumber extends AppCompatActivity implements ViewSwitcher.ViewF
                 mp3.release();
             }
         } catch (Exception e) {
+            //
             //Toast.makeText(this, "Masuk Exception", Toast.LENGTH_LONG).show();
         }
         if (Btn == voiceENG[0]) {
