@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 
 public class SplashScreen extends AppCompatActivity {
 
+
     private static int splashInterval = 3000;
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
